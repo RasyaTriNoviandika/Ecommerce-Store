@@ -6,103 +6,101 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-4xl font-bold text-gray-900">Admin Dashboard</h1>
-            <div class="flex gap-4">
-                <a href="{{ route('admin.products') }}" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-                    <i class="fas fa-box mr-2"></i>Manage Products
-                </a>
-            </div>
+            <a href="{{ route('admin.products') }}" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">
+                Manage Products
+            </a>
         </div>
 
         <!-- Stats Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg p-6 text-white">
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-blue-100 mb-2">Total Products</p>
-                        <p class="text-4xl font-bold">{{ $stats['total_products'] }}</p>
+                        <p class="text-gray-600 mb-2">Total Products</p>
+                        <p class="text-4xl font-bold text-gray-900">{{ $stats['total_products'] }}</p>
                     </div>
-                    <i class="fas fa-box text-5xl opacity-50"></i>
+                    <i class="fas fa-box text-5xl text-gray-300"></i>
                 </div>
             </div>
 
-            <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl shadow-lg p-6 text-white">
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-purple-100 mb-2">Total Categories</p>
-                        <p class="text-4xl font-bold">{{ $stats['total_categories'] }}</p>
+                        <p class="text-gray-600 mb-2">Total Categories</p>
+                        <p class="text-4xl font-bold text-gray-900">{{ $stats['total_categories'] }}</p>
                     </div>
-                    <i class="fas fa-tags text-5xl opacity-50"></i>
+                    <i class="fas fa-tags text-5xl text-gray-300"></i>
                 </div>
             </div>
 
-            <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl shadow-lg p-6 text-white">
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-green-100 mb-2">Total Orders</p>
-                        <p class="text-4xl font-bold">{{ $stats['total_orders'] }}</p>
+                        <p class="text-gray-600 mb-2">Total Orders</p>
+                        <p class="text-4xl font-bold text-gray-900">{{ $stats['total_orders'] }}</p>
                     </div>
-                    <i class="fas fa-shopping-bag text-5xl opacity-50"></i>
+                    <i class="fas fa-shopping-bag text-5xl text-gray-300"></i>
                 </div>
             </div>
 
-            <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl shadow-lg p-6 text-white">
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-yellow-100 mb-2">Total Revenue</p>
-                        <p class="text-3xl font-bold">Rp {{ number_format($stats['total_revenue'], 0, ',', '.') }}</p>
+                        <p class="text-gray-600 mb-2">Total Revenue</p>
+                        <p class="text-3xl font-bold text-gray-900">Rp {{ number_format($stats['total_revenue'], 0, ',', '.') }}</p>
                     </div>
-                    <i class="fas fa-dollar-sign text-5xl opacity-50"></i>
+                    <i class="fas fa-dollar-sign text-5xl text-gray-300"></i>
                 </div>
             </div>
         </div>
 
         <!-- Quick Links -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <a href="{{ route('admin.products') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all">
+            <a href="{{ route('admin.products') }}" class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
                 <div class="flex items-center justify-between">
                     <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Products</h3>
                         <p class="text-gray-600">Manage your product catalog</p>
                     </div>
-                    <i class="fas fa-box text-4xl text-blue-600"></i>
+                    <i class="fas fa-box text-4xl text-gray-300"></i>
                 </div>
             </a>
 
-            <a href="{{ route('admin.categories') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all">
+            <a href="{{ route('admin.categories') }}" class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
                 <div class="flex items-center justify-between">
                     <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Categories</h3>
                         <p class="text-gray-600">Organize product categories</p>
                     </div>
-                    <i class="fas fa-tags text-4xl text-purple-600"></i>
+                    <i class="fas fa-tags text-4xl text-gray-300"></i>
                 </div>
             </a>
 
-            <a href="{{ route('admin.orders') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all">
+            <a href="{{ route('admin.orders') }}" class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
                 <div class="flex items-center justify-between">
                     <div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Orders</h3>
                         <p class="text-gray-600">View and manage orders</p>
                     </div>
-                    <i class="fas fa-shopping-bag text-4xl text-green-600"></i>
+                    <i class="fas fa-shopping-bag text-4xl text-gray-300"></i>
                 </div>
             </a>
         </div>
 
         <!-- Recent Orders -->
-        <div class="bg-white rounded-xl shadow-lg p-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Recent Orders</h2>
             @if($recentOrders->count() > 0)
                 <div class="overflow-x-auto">
                     <table class="w-full">
                         <thead>
-                            <tr class="border-b-2 border-gray-200">
-                                <th class="text-left py-3 px-4 font-semibold">Order ID</th>
-                                <th class="text-left py-3 px-4 font-semibold">Customer</th>
-                                <th class="text-left py-3 px-4 font-semibold">Total</th>
-                                <th class="text-left py-3 px-4 font-semibold">Status</th>
-                                <th class="text-left py-3 px-4 font-semibold">Date</th>
-                                <th class="text-left py-3 px-4 font-semibold">Action</th>
+                            <tr class="border-b">
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Order ID</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Customer</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Total</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Status</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Date</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-700">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,7 +121,7 @@
                                     </td>
                                     <td class="py-4 px-4 text-gray-600">{{ $order->created_at->format('d M Y') }}</td>
                                     <td class="py-4 px-4">
-                                        <a href="{{ route('admin.orders') }}" class="text-blue-600 hover:text-blue-700">
+                                        <a href="{{ route('admin.orders') }}" class="text-blue-600 hover:text-blue-700 font-medium">
                                             View
                                         </a>
                                     </td>
@@ -138,4 +136,3 @@
         </div>
     </div>
 @endsection
-
